@@ -1,0 +1,26 @@
+print("Welcome to my website! Type 'Login' to login or 'Sign up' to sign up.")
+
+if input("Login or Sign up:") == "Sign up": 
+  while True:
+    name = input("Enter your name:")
+    surname = input("Enter you surname:")
+    user_name = input("Create a user name:")
+    user_password = input("Create a password:")
+    password_repeat = input("Repeat your password:")
+    if user_password == password_repeat:
+      print("Thanks for creating an account!")
+      break
+    else:
+      print("Passwords do not match. Please try again")
+
+if input("Login or Sign up:") == "Login":
+  while True:
+    user_name_login = input("Enter your Username:")
+    user_password_login = input("Enter your password:")
+    if user_name_login == user_name and user_password_login == user_password:
+      print("This is a valid Username and password. Thanks for logging in!")
+      break
+    else:
+      print("This Username or password is invalid.")
+
+print(f"Hello {name} {surname}")  
